@@ -6,34 +6,26 @@ import {
   FaFacebook,
   FaDev,
   FaMedium,
-  FaEnvelope
+  FaEnvelope,
+  FaInstagram
 } from 'react-icons/fa'
 
 
-const Footer = () => {
+const Footer = ({ darkMode }) => {
   return (
-    <footer className='bg-[#F0F2F5] py-8'>
+    <footer className='bg-[#F0F2F5] dark:bg-[#131313] py-8'>
       <div className='flex flex-col items-center justify-center space-y-6'>
         <div className='flex space-x-6 text-gray-500 text-xl'>
-          <a href='#'>
+          <a href='https://github.com/keshavarora015'>
             <FaGithub className='hover:text-blue-600 transition transform hover:scale-125' />
           </a>
-          <a href='#'>
-            <FaTwitter className='hover:text-blue-600 transition transform hover:scale-125' />
-          </a>
-          <a href='#'>
+          <a href='https://www.linkedin.com/in/keshavarora015/'>
             <FaLinkedin className='hover:text-blue-600 transition transform hover:scale-125' />
           </a>
-          <a href='#'>
-            <FaFacebook className='hover:text-blue-600 transition transform hover:scale-125' />
+          <a href='https://www.instagram.com/keshav_arora_/?hl=en'>
+            <FaInstagram className='hover:text-blue-600 transition transform hover:scale-125' />
           </a>
-          <a href='#'>
-            <FaDev className='hover:text-blue-600 transition transform hover:scale-125' />
-          </a>
-          <a href='#'>
-            <FaMedium className='hover:text-blue-600 transition transform hover:scale-125' />
-          </a>
-          <a href='#'>
+          <a href='mailto:keshavarora015@gmail.com'>
             <FaEnvelope className='hover:text-blue-600 transition transform hover:scale-125' />
           </a>
         </div>

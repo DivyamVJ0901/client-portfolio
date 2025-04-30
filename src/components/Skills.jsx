@@ -1,37 +1,65 @@
 import React from 'react'
 import SkillCard from './SkillCard'
+import java from "../assets/Java.webp"
+import springMVC from "../assets/spring-mvc.png"
+import springBoot from "../assets/spring-boot.svg"
+import JPA from "../assets/JPA.png"
+import Hibernate from "../assets/Hibernate.png"
+import restApi from "../assets/REST_API.png"
+import apiDes from "../assets/API_DES.jpg"
+import mySQL from "../assets/mySQL.webp"
+import mongoDB from "../assets/mongoDB.png"
+import redis from "../assets/redis.png"
+import kafka from "../assets/kafka.png"
+import debezium from "../assets/debezium.png"
+import aws from "../assets/AWS.webp"
+import git from "../assets/git.webp"
+import jira from "../assets/Jira_.png"
+import design from "../assets/design-pattern.jpeg"
+import oops from "../assets/OOPS.png"
+import keycloack from "../assets/keycloak.png"
+import jwt from "../assets/JWT.webp"
+import dsa from "../assets/dsa_.png"
+import micro_serv from "../assets/microservices.png"
+import docker from "../assets/docker.webp"
 
-const skills = [
-  { title: 'Node.js', icon: '/icons/nodejs.png' },
-  { title: 'Express.js', icon: '/icons/express.png' },
-  { title: 'JavaScript', icon: '/icons/javascript.png' },
-  { title: 'TypeScript', icon: '/icons/typescript.png' },
-  { title: 'Nest.js', icon: '/icons/nestjs.png' },
-  { title: 'PHP', icon: '/icons/php.png' },
-  { title: 'Laravel', icon: '/icons/laravel.png' },
-  { title: 'MySQL', icon: '/icons/mysql.png' },
-  { title: 'PostgreSQL', icon: '/icons/postgresql.png' },
-  { title: 'Cassandra', icon: '/icons/cassandra.png' },
-  { title: 'Git', icon: '/icons/git.png' },
-  { title: 'Docker', icon: '/icons/docker.png' },
-  { title: 'RabbitMQ', icon: '/icons/rabbitmq.png' },
-  { title: 'React.js', icon: '/icons/reactjs.png' },
-  { title: 'Tailwind', icon: '/icons/tailwind.png' }
+const skills = [ 
+  { title: 'Java', icon: java },
+  { title: 'Spring Boot', icon: springBoot },
+  { title: 'Spring MVC', icon: springMVC },
+  { title: 'JPA', icon: JPA },
+  { title: 'Hibernate', icon: Hibernate},
+  { title: 'AWS', icon: aws  },
+  { title: 'Kafka', icon: kafka },
+  { title: 'MySQL', icon: mySQL},
+  { title: 'Mongo DB', icon: mongoDB},
+  { title: 'Redis', icon: redis },
+  { title: 'REST APIs', icon: restApi },
+  { title: 'Microservices', icon: micro_serv },
+  { title: 'Design pattern', icon: design},
+  { title: 'OOPS', icon: oops },
+  { title: 'Data Structures and Algorithms', icon: dsa },
+  { title: 'Git', icon: git},
+  { title: 'Docker', icon: docker },
+  { title: 'Keycloak', icon: keycloack },
+  { title: 'JSON Web Tokens', icon: jwt },
+  { title: 'Debezium', icon: debezium },
+
 ]
 
-const Skills = () => {
+const Skills = ({ darkMode }) => {
   return (
-    <section className='py-16 bg-[#F0F2F5]' id='skills'>
+    <section className='pt-4 pb-12 bg-[#F0F2F5] dark:bg-[#131313]' id='skills'>
       <div className='container mx-auto px-4 '>
         <h2
-          className='text-center mb-12'
+          className='text-center mb-12 mt-8'
           style={{
             fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
             fontWeight: 700,
             fontStyle: 'normal',
             fontSize: '30px',
             lineHeight: '36px',
-            color: 'rgb(107, 114, 128)',
+            color:  darkMode ? 'rgb(156, 163, 175)' : 'rgb(107, 114, 128)',
             letterSpacing: '3px' 
           }}
         >
@@ -39,7 +67,7 @@ const Skills = () => {
         </h2>
         <div className='max-w-6xl w-full mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8'>
           {skills.map((skill, index) => (
-            <SkillCard key={index} icon={skill.icon} title={skill.title} />
+            <SkillCard key={index} icon={skill.icon} title={skill.title} darkMode={darkMode}/>
           ))}
         </div>
       </div>
